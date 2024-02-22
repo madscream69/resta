@@ -78,3 +78,63 @@
         
     }
 }
+//MENU
+.active-menu{
+    display: block; 
+}
+.hide-menu{
+    display: none;
+}
+.menu{
+     // potom smenim na NONE
+
+    margin: 0 auto;
+    max-width: 60%;
+}
+
+.menu__grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+
+    
+}
+
+.grid-element{
+    display: flex;
+    flex-direction: row;
+
+    
+}
+
+.grid-info{
+    padding-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+    & h3{
+        color: #001D38;
+        font-size: 2.4rem;
+        margin-bottom: 0;
+        line-height: 3rem;
+        font-weight: 400;
+        font-family: "Poppins", sans-serif;
+
+
+    }
+
+    & p{
+        font-family: "Poppins", sans-serif;
+        font-size: 1.6rem;
+        color: #596672;
+
+        overflow-wrap: normal;
+    }
+    & span{
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-size: 2.4rem;
+        color: #DB9A64;
+    }
+}
