@@ -62,7 +62,7 @@
     }
 }
 
-.active{
+.nav-menu--active{
     color: #DB9A64;
     
     
@@ -79,10 +79,10 @@
     }
 }
 //MENU
-.active-menu{
+.menu--show{
     display: block; 
 }
-.hide-menu{
+.menu--hide{
     display: none;
 }
 .menu{

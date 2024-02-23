@@ -34,34 +34,52 @@ window.addEventListener('DOMContentLoaded', ()=>{
 
 
     const choose = document.querySelectorAll('.nav-menu'),
-          choose_parent = document.querySelector('nav-menu'),
+          choose_parent = document.querySelector('.nav-parent'),
           menu = document.querySelectorAll('.menu');
 
     function hideMenuContent() {
         menu.forEach(item =>{
-          item.classList.add('hide-menu');
+          item.classList.remove('menu--show');
+          item.classList.add('menu--hide');
         });
         choose.forEach(item =>{
-          item.classList.remove('active');
+          item.classList.remove('nav-menu--active');
         });
     }
     function showMenuContent(i=0) {
-      menu[i].classList.remove('hide-menu');
-      choose[i].classList.add('active');
+      menu[i].classList.remove('menu--hide');
+      menu[i].classList.add('menu--show');
+      choose[i].classList.add('nav-menu--active');
     }
     hideMenuContent();
     showMenuContent();
     //не работает, страница обновляется при нажатии на кнопки
-    // choose_parent.addEventListener('click', (event)=>{
-    //   const target = event.target;
-    //   event.preventDefault();
-    //   if(target && target.classList.contains('nav-menu')){
-    //     choose.forEach((item, i)=>{
-    //       if(target == item){
-    //         hideMenuContent();
-    //         showMenuContent(i);
-    //       }
-    //     });
-    //   }
-    // });
+
+    // for(const stage of choose){
+    //   stage.addEventListener('click', ()=>{
+    //     console.log(stage);
+    //     hideMenuContent();
+    //     showMenuContent(1);// nado i
+    //   });
+    // }
+
+
+    choose_parent.addEventListener('click', (event)=>{
+      const target = event.target;
+      
+      // event.preventDefault();
+      // if(target.classList.contains('nav-menu')){}
+      if (!target.closest(".nav-menu")) return
+        
+        // console.log(target); // dlya ponimaniya
+        // console.log('SUKAAAAAAAAAA')
+        choose.forEach((item, i)=>{
+          if(target.closest(".nav-menu") == item.closest(".nav-menu")){
+            // console.log(item); // dlya ponimaniya
+            hideMenuContent();
+            showMenuContent(i);
+          }//da kakoi je ya suka sexualniy geniy prosto raziebalova!!!!!!
+        });
+      
+    });
 })
