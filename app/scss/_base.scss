@@ -51,6 +51,15 @@ h1{
 font-style: normal;
 }
 
+// @font-face {
+//   font-family: 'lg';
+//   src: url("../fonts/lg.woff2") format("woff2"),
+//       url("../fonts/lg.woff") format("woff"),
+//       url("../fonts/lg.svg") format("svg");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
 .flaticon-food:before { content: "\f100"; }
 .flaticon-kitchen:before { content: "\f101"; }
 .flaticon-lunch:before { content: "\f102"; }

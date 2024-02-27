@@ -26,5 +26,8 @@
     "gulp-webp": "^4.0.1",
     "sass": "^1.69.7",
     "swiper": "^11.0.5"
+  },
+  "dependencies": {
+    "lightgallery": "^2.7.2"
   }
 }
