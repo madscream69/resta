@@ -100,5 +100,18 @@ window.addEventListener('DOMContentLoaded', ()=>{
               items:2
           }
       }
-  })
+  });
+  //date
+  var now = new Date();//Date.now()
+  
+  let mounth = now.getMonth()+1;
+  let date = now.getDate();
+  if(mounth<10){
+    mounth=`0${mounth}`;
+  }
+  if(date<10){
+    date=`0${date}`;
+  }
+  var dateControl = document.querySelector('input[type="date"]');
+  dateControl.value = `${now.getFullYear()}-${mounth}-${date}`;
 })
