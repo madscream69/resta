@@ -22,6 +22,21 @@
         flex-direction: row;
         
     }
+
+    & .icon-1{
+        top: 5%;
+        // right: 5%;
+        left: 85%;
+    }
+    & .icon-2{
+        bottom: -15%;
+        left: 83%;
+
+    }
+    & .icon-3{
+        right: 87%;
+        bottom: 1%;
+    }
 }
 
 
